@@ -1,0 +1,13 @@
+Measure and Calculated Columns
+
+
+- Street_Crime Table : Measures
+Total Crimes: COUNTROWS(Street_Crime) - Counts the total number of crime records.
+Total Outcomes: COUNTA(Street_Crime[Last outcome category]) - Counts the number of crimes with a recorded outcome.
+Crimes by Type: COUNTAX(RELATEDTABLE(Crime_Type), Crime_Type[Crime type]) - Counts the number of crimes by type (if the Crime_Type table has additional information).
+
+
+- Calculated Columns:
+Month: Month(Street_Crime[Month]) - Extracts the year from the Month column.
+   Rename the existing Month Column as Date
+Has Outcome: IF(ISBLANK(Street_Crime[Last outcome category]), "No", "Yes") - Indicates whether a crime had an outcome recorded.
