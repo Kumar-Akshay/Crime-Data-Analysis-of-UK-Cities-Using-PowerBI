@@ -11,3 +11,7 @@ Crimes by Type: COUNTAX(RELATEDTABLE(Crime_Type), Crime_Type[Crime type]) - Coun
 Month: Month(Street_Crime[Month]) - Extracts the year from the Month column.
    Rename the existing Month Column as Date
 Has Outcome: IF(ISBLANK(Street_Crime[Last outcome category]), "No", "Yes") - Indicates whether a crime had an outcome recorded.
+
+
+Today I learned,
+Shower Thoughts
